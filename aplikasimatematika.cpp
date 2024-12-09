@@ -67,3 +67,59 @@ void quadraticFunction() {
     cout << "Nilai fungsi pada x = " << x << " adalah: " << result << endl;
 }
 
+void gradientCalculation() {
+    float x1, y1, x2, y2;
+
+    cout << "=== Menghitung Gradien ===" << endl;
+    cout << "Masukkan koordinat titik pertama (x1 y1): ";
+    cin >> x1 >> y1;
+    cout << "Masukkan koordinat titik kedua (x2 y2): ";
+    cin >> x2 >> y2;
+
+    if (x1 == x2) {
+        cout << "Gradien tidak terdefinisi karena garis vertikal." << endl;
+    } else {
+        float gradien = (y2 - y1) / (x2 - x1);
+        cout << "Gradien garis adalah: " << gradien << endl;
+    }
+}
+
+int main() {
+    char choice;
+
+    cout << "=== Find the Treasure Solution ===" << endl;
+
+    do {
+        cout << "Pilih program yang ingin dijalankan:" << endl;
+        cout << "A) Yarra's Program (Deret Fibonacci)" << endl;
+        cout << "B) Muti's Program (Fungsi Kuadrat)" << endl;
+        cout << "C) Muti and Yara Programs (Gradien Garis)" << endl;
+        cout << "D) Have you found the solution? (Exit)" << endl;
+        cout << "Masukkan pilihan (A/B/C/D): ";
+        cin >> choice;
+
+        switch (choice) {
+            case 'A':
+            case 'a':
+                fibonacci();
+                break;
+            case 'B':
+            case 'b':
+                quadraticFunction();
+                break;
+            case 'C':
+            case 'c':
+                gradientCalculation();
+                break;
+            case 'D':
+            case 'd':
+                cout << "Terima kasih! Sampai jumpa!" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid. Silakan coba lagi." << endl;
+        }
+
+    } while (choice != 'D' && choice != 'd');
+
+    return 0;
+}
