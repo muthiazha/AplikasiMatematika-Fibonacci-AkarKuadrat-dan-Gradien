@@ -91,9 +91,9 @@ int main() {
 
     do {
         cout << "Pilih program yang ingin dijalankan:" << endl;
-        cout << "A) Yarra's Program (Deret Fibonacci)" << endl;
-        cout << "B) Muti's Program (Fungsi Kuadrat)" << endl;
-        cout << "C) Muti and Yara Programs (Gradien Garis)" << endl;
+        cout << "A) Fibonacci rows program (Deret Fibonacci)" << endl;
+        cout << "B) Quadratic function program (Fungsi Kuadrat)" << endl;
+        cout << "C) Gradien calculation program (Kalkulasi Gradien)" << endl;
         cout << "D) Have you found the solution? (Exit)" << endl;
         cout << "Masukkan pilihan (A/B/C/D): ";
         cin >> choice;
@@ -113,10 +113,10 @@ int main() {
                 break;
             case 'D':
             case 'd':
-                cout << "Terima kasih! Sampai jumpa!" << endl;
+                cout << "Terima kasih!" << endl;
                 break;
             default:
-                cout << "Pilihan tidak valid. Silakan coba lagi." << endl;
+                cout << "Pilihan tidak valid. Silhakan coba lagi." << endl;
         }
 
     } while (choice != 'D' && choice != 'd');
