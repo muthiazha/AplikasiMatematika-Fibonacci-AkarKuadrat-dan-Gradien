@@ -1,5 +1,4 @@
-#include <iostream>
-#include <stdexcept> 
+#include <iostream> 
 
 using namespace std;
 
@@ -59,3 +58,12 @@ void quadraticFunction() {
     cin >> b;
     cout << "Masukkan koefisien c: ";
     cin >> c;
+
+    findRoots(a, b, c);
+
+    cout << "Masukkan nilai x untuk menghitung f(x): ";
+    cin >> x;
+    double result = evaluateFunction(a, b, c, x);
+    cout << "Nilai fungsi pada x = " << x << " adalah: " << result << endl;
+}
+
